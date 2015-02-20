@@ -1,9 +1,11 @@
 // typography
-$font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-$font-size: 1.25em;
+$font-family: "Merriweather", serif;
+$font-family-headings: 'Source Sans Pro', sans-serif;
+$font-size: 1em;
 
-// padding
+// padding  
 $padding-large: 20%;
+$padding-medium: 10%;
 $padding-small: 5%;
 $padding-x-small: 3%;
 
@@ -14,7 +16,7 @@ $border-color: rgba(0, 0, 0, 0.1); // rgba recommended if using feature images
 
 // typography colors
 $text-color: #383838;
-$link-color: #1ABC9C;
+$link-color: #000066;; //#1ABC9C;
 $selection-color: #D4D4D4; // visible when highlighting text
 
 // header colors
