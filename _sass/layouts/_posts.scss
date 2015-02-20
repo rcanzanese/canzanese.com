@@ -35,10 +35,13 @@ header {
     color: $feature-image-text-color;
   }
   header {
+    min-height: 150px;
     color: $feature-image-text-color;
     background-size: $feature-image-size;
     margin-bottom: 0;
-    padding: $padding-large/2.5 $padding-large;
+    padding: 25px $padding-large;
+    text-shadow: 4px 4px 8px #000000;
+
     .meta {
       color: rgba($feature-image-text-color, .7);
     }
@@ -47,3 +50,5 @@ header {
     @extend %padding-regular;
   }
 }
+
+
