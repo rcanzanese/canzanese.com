@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://example.com" # the base hostname & protocol for your site
+url: "http://www.canzanese.com" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme:
@@ -8,15 +8,12 @@ theme:
   title: Ray Canzanese
   avatar: avatar.png
   gravatar: # email md5 hash
-  description: "A website with blog posts and pages" # used by search engines
+  description: "Teaching, Research, Projects, and Musings of Ray Canzanese" # used by search engines
   
   # Header and footer text
-  header_text: >
-     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-     
-     <p>Remove all header text in <code>_config.yml</code> to disable this feature.</p>
+  header_text:
   footer_text: >
-   Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
+   Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a> and <a href="https://github.com/inukshuk/jekyll-scholar">Jekyll-Scholar</a>.
   
   # Icons
   rss: false
@@ -24,25 +21,25 @@ theme:
   behance:
   bitbucket: 
   dribbble: 
-  facebook: 
+  facebook: "rcanzanese"
   flickr: 
-  github: "rohanchandra/type-theme"
+  github: "rcanzanese"
   google_plus: 
   instagram: 
-  linkedin:  # full URL
+  linkedin:  "https://www.linkedin.com/pub/raymond-canzanese-jr/6/a84/178" # full URL
   pinterest: 
   reddit: 
   soundcloud: 
   stack_exchange:  # full URL
   steam: 
   tumblr: 
-  twitter: "twitter"
+  twitter:
   wordpress: 
   youtube: 
   
   # Scripts
-  google_analytics: # tracking id, e.g. "UA-000000-01"
-  disqus_shortname:
+  google_analytics: "UA-40099975-1" # tracking id, e.g. "UA-000000-01"
+  disqus_shortname: "canzanese"
   
   # Localization strings
   str_follow_on: "Follow on"
@@ -56,8 +53,8 @@ theme:
   # Open the "_sass > base" folder, and open "_variables.scss"
 
 # PAGINATION
-paginate: 5
-paginate_path: "blog/page:num"
+paginate: 10
+paginate_path: "archive/page:num"
 
 # BUILD SETTINGS
 markdown: kramdown
@@ -65,3 +62,21 @@ highlighter: pygments
 sass:
   sass_dir: _sass
   style: :compressed
+  
+# BIBTEX SETTINGS
+scholar:
+  style:  _bibliography/apa-nvv
+  locale: en
+  sort_by: year
+  order: descending
+  source: ./_bibliography
+  bibliography: publications.bib
+  bibliography_template: bib
+  replace_strings: true
+  join_strings:    true
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+  query: "@*"
+  repository: ./publications/
+  
