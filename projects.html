@@ -1,0 +1,23 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+feature-img: "img/bike.jpg"
+---
+
+{% for post in site.posts limit:10 %}  
+    <hr>
+       <div class="projectlink">
+	   <span><a href="{{ BASE_PATH }}{{ post.url }}" class="projectlink">  
+	   {{ post.title }}</a></span>  <span class="date">{{ post.date | date_to_string }}</span>
+	   <p>
+	   {% if post.description %}
+	   {{post.description}} <br>
+	   {% endif %}
+	   <a href="{{ BASE_PATH }}{{ post.url }}">[read more]</a>  </p>	   
+	   </span>
+{% endfor %}  
+    <hr>
+
+<p class="centered"><a href="{{ BASE_PATH }}/archive">[archive]</a></p>
+
