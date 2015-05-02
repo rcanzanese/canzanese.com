@@ -12,6 +12,8 @@
 <a href="{{link}}">[pdf]</a>
 {% if entry.url %}
 <a href="{{entry.url}}">[pub]</a>
+{% elsif entry.doi %}
+<a href="http://dx.doi.org/{{entry.doi}}">[pub]</a>
 {% endif %}
 
 
