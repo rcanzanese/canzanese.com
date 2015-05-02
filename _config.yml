@@ -65,12 +65,12 @@ sass:
   
 # BIBTEX SETTINGS
 scholar:
-  style:  _bibliography/apa-nvv
+  style:  _bibliography/ieee_custom
   locale: en
   sort_by: year
   order: descending
   source: ./_bibliography
-  bibliography: publications.bib
+  bibliography: other.bib
   bibliography_template: bib
   replace_strings: true
   join_strings:    true
