@@ -5,6 +5,10 @@ permalink: /publications/
 feature-img: "img/mountain.jpg"
 ---
 
+### Thesis 
+
+{% bibliography --file thesis %}
+
 ### Conference Papers
 
 {% bibliography --file conferences %}
