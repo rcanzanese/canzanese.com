@@ -54,6 +54,14 @@
 </li>
 {% endif %}
 
+{% if site.theme.geocaching %}
+<li>
+    <a href="http://www.geocaching.com/profile/?guid={{ site.theme.geocaching }}" title="{{ site.theme.str_follow_on }}">
+        <i class="fa fa-fw fa-globe"></i>
+    </a>
+</li>
+{% endif %}
+
 {% if site.theme.github %}
 <li>
 	<a href="https://github.com/{{ site.theme.github }}" title="{{ site.theme.str_follow_on }} GitHub">
