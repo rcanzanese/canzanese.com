@@ -66,6 +66,79 @@ There were a couple times I needed to access the ZoneMinder logs.  To do this, I
 docker exec -i -t zoneminder /bin/bash
 {% endhighlight %}
 
+## Enabling SSL
+
+First, get some valid SSL Certs using cerbot and Let's Encrypt:
+
+    apt-get update
+    apt-get install software-properties-common
+    add-apt-repository ppa:certbot/certbot
+    apt-get update
+    apt-get install certbot
+    
+Then use the webroot plugin to obtain a cert
+
+    certbot certonly --webroot -w /usr/local/share/zoneminder/www -d [url]
+
+Add a cron job for renewing the certificate automatically:
+
+    0 0 1 * * /usr/bin/certbot renew
+
+The certs end up in:
+
+    /etc/letsencrypt/live/[url]/
+
+Then update the apache config to use the new certs by adding the following to `/etc/apache2/sites-enabled/000-default.conf`.
+
+
+{% highlight apache %}
+    <VirtualHost *:443>
+        DocumentRoot /usr/local/share/zoneminder/www
+        DirectoryIndex index.php
+
+        ScriptAlias /cgi-bin/ /usr/local/libexec/zoneminder/cgi-bin/
+        <Directory />
+                Require all granted
+        </Directory>
+        <Directory "/usr/local/libexec/zoneminder/cgi-bin">
+                AllowOverride None
+                Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+                Require all granted
+        </Directory>
+
+        ServerName [url]
+        SSLEngine on
+        SSLCertificateFile /etc/letsencrypt/live/[url]/cert.pem
+        SSLCertificateKeyFile /etc/letsencrypt/live/[url]/privkey.pem
+        SSLCertificateChainFile /etc/letsencrypt/live/[url]/chain.pem
+    </VirtualHost>
+{% endhighlight %}
+
+Get the image ID:
+
+    docker inspect zoneminder
+
+Stop zoneminder:
+
+    sytemctl stop zoneminder
+
+Then update `/var/lib/docker/containers/[id]/config.v2.json` to include:
+
+{% highlight json %}
+"ExposedPorts":{"443/tcp":{},"80/tcp":{}}
+{% endhighlight %}
+
+And `/var/lib/docker/containers/[id]/hostconfig.json`
+
+{% highlight json %}
+"PortBindings":{"443/tcp":[{"HostIp":"","HostPort":"443"}],"80/tcp":[{"HostIp":"","HostPort":"80"}]}
+{% endhighlight %}
+
+And restart docker and zoneminder:
+
+   systemctl restart zoneminder docker
+
 ## Conclusions
 
-This is quick and easy to setup.  From start to finish, it took me less than an hour to have a functioning installation.  
+This is quick and easy to setup.  From start to finish, it took me less than an hour to have a functioning installation.  Figuring out the SSL setup probably took me a couple hours, but if I had to do it again, it would be much faster. 
+
