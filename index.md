@@ -4,7 +4,7 @@ feature-img: "img/bossone.jpg"
 ---
 
 ## Ray Canzanese
-Chief Technology Officer  at [Sift Security](http://www.siftsecurity.com)
+IaaS Architect at [Netskope](https://www.netskope.com/)
 
 ### Education
 * Ph.D. in Electrical Engineering (2015) Drexel University
