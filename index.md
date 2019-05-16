@@ -4,7 +4,9 @@ feature-img: "img/bossone.jpg"
 ---
 
 ## Ray Canzanese
-IaaS Architect at [Netskope](https://www.netskope.com/)
+Research Director at [Netskope](https://www.netskope.com/)
+
+Check out our latest work on our [blog](https://www.netskope.com/blog/category/netskope-threat-research-labs)
 
 ### Education
 * Ph.D. in Electrical Engineering (2015) Drexel University
