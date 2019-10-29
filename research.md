@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research
+title: Academic Research
 permalink: /research/
 feature-img: "img/research.jpg"
 ---
