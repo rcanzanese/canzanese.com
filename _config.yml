@@ -5,10 +5,10 @@ url: "http://www.canzanese.com" # the base hostname & protocol for your site
 plugins: ['jekyll-twitter-plugin']
 
 # THEME-SPECIFIC CONFIGURATION
-theme:
+theme_settings:
   # Meta
   title: Ray Canzanese
-  avatar: avatar.png
+  avatar: assets/img/avatar.png
   gravatar: # email md5 hash
   description: "Teaching, Research, Projects, and Musings of Ray Canzanese" # used by search engines
   
@@ -16,10 +16,13 @@ theme:
   header_text:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a> and <a href="https://github.com/inukshuk/jekyll-scholar">Jekyll-Scholar</a>.
-  
+
+  avatar: assets/img/avatar.png
+  favicon: assets/favicon.ico
+
   # Icons
   rss: false
-  email_address: # full email address, e.g. "sam@example.com"
+  email_address: # Full email address, e.g. "sam@example.com"
   behance:
   bitbucket: 
   dribbble: 
@@ -44,16 +47,27 @@ theme:
   google_analytics: "UA-40099975-1" # tracking id, e.g. "UA-000000-01"
   disqus_shortname: "canzanese"
   
+  katex: true # Enable if using math markup
+  search: false # Enable the search feature
+
   # Localization strings
   str_follow_on: "Follow on"
   str_rss_follow: "Follow RSS feed"
   str_email: "Email"
-  str_next: "Next"
-  str_prev: "Prev"
+  str_next_post: "Next post"
+  str_previous_post: "Previous post"
+  str_next_page: "Next"
+  str_previous_page: "Prev"
   str_continue_reading: "Continue reading"
-  
-  # Colors, typography and padding
+  str_javascript_required_disqus: "Please enable JavaScript to view comments."
+  str_search_no_results: "No results found."
+
+  # Colours, typography and padding
   # Open the "_sass > base" folder, and open "_variables.scss"
+  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
+
+  # Post navigation
+  post_navigation: false
 
 # PAGINATION
 paginate: 10
@@ -61,7 +75,7 @@ paginate_path: "archive/page:num"
 
 # BUILD SETTINGS
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
@@ -83,3 +97,7 @@ scholar:
   query: "@*"
   repository: ./publications/
   
+plugins: [jekyll-paginate]
+exclude:
+  - Gemfile
+  - Gemfile.lock

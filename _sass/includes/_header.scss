@@ -5,11 +5,11 @@
   display: inline-block;
   float: left;
   width: 100%;
-  
+
   a {
     color: $header-link-color;
   }
-  
+
   .avatar {
     height: 2.5em;
     width: 2.5em;
@@ -18,7 +18,7 @@
     border-radius: 0.2em;
     margin-right: 1em;
   }
-  
+
   .site-title {
     float: left;
     font-weight: bold;
@@ -45,13 +45,11 @@
     li {
       font-size: 1.2em;
       display: inline;
-      float: left;
-      margin-right: 0em;
-      margin-top:em;
-      margin-left: 0em;
-    }
-    a:hover{
-       color: #000066;
+      margin-right: 1em;
+      vertical-align: middle;
+      &:last-of-type {
+        margin-right: 0;
+      }
     }
     @media (max-width: 800px) {
       ul {
@@ -60,7 +58,43 @@
         padding-top: $padding-small;
         text-align: left;
         width: 100%;
-      } 
+      }
     }
   }
+
+    /* --- Search form --- */
+    form {
+        border: 0;
+        border-bottom: 2px solid $search-color;
+        outline: 0;
+
+        *:focus {
+            outline: none;
+        }
+
+        input{
+            &[type=text] {
+                box-sizing: border-box;
+                border: 0;
+                outline: 0;
+                color: $search-color;
+            }
+
+            &::-moz-placeholder {
+                color: $search-color;
+                opacity: 1;
+            }
+
+            &:-ms-input-placeholder, &::-webkit-input-placeholder {
+                color: $search-color;
+            }
+        }
+
+        button {
+           border: none;
+           font-size: 0.9em;
+           background-color: $brand-color;
+           color: $search-color;
+        }
+    }
 }

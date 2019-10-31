@@ -1,9 +1,10 @@
-// call out feature
+// Header text feature
 .call-out {
   @extend %padding-regular;
   display: inline-block;
   width: 100%;
-  background: none repeat scroll 0% 0% $header-desc-background-color;
+  background-color:$header-desc-background-color;
+  background-size: cover;
   font-size: 1.2em;
   text-align: center;
   color: $header-desc-text-color;
@@ -11,7 +12,10 @@
 .call-out p:last-child {
   margin-bottom: 0;
 }
-// post listing
+.call-out a {
+  color: $header-desc-link-color
+}
+// Post listing
 .posts {
   .post-teaser {
     @extend %padding-regular;
@@ -20,15 +24,15 @@
     display: inline-block;
     background-size: $feature-image-size;
     border-bottom: 1px solid $border-color;
-    p a:hover {
-      @extend %link-hover;
+    p a {
+      @extend .body-link;
     }
   }
   .excerpt {
     margin-top: 1em;
   }
 }
-// pagination
+// Pagination
 .pagination .button {
   margin: 0 1.5em;
   i {
@@ -38,4 +42,7 @@
 .pagination {
   padding: $padding-small $padding-large 0 $padding-large;
   text-align: center;
+  @media (max-width: 600px) {
+    padding: $padding-small;
+  }
 }

@@ -1,31 +1,37 @@
-// typography
-$font-family: "Merriweather", serif;
-$font-family-headings: 'Source Sans Pro', sans-serif;
-$font-size: 1em;
+// Typography
+$font-family-main: 'Source Sans Pro', Helvetica, Arial, sans-serif !default;
+$font-family-headings: 'Source Sans Pro', Helvetica, Arial, sans-serif !default;
+$font-size: 1.10em !default;
 
-// padding  
-$padding-large: 20%;
-$padding-medium: 10%;
-$padding-small: 5%;
-$padding-x-small: 3%;
+// Padding
+$padding-large: 20% !default;
+$padding-small: 5% !default;
+$padding-x-small: 3% !default;
 
-// brand colors
-$brand-color: #fff;
-$background-color: #fff;
-$border-color: rgba(0, 0, 0, 0.1); // rgba recommended if using feature images
+// Brand colours
+$brand-color: #fff !default;
+$background-color: #fff !default;
+$border-color: rgba(0, 0, 0, 0.1) !default; // rgba recommended if using feature images
 
-// typography colors
-$text-color: #383838;
-$link-color: #000066;; //#1ABC9C;
-$selection-color: #D4D4D4; // visible when highlighting text
+// Typography colours
+$text-color: #383838 !default;
+$link-color: #1ABC9C !default;
+$selection-color: #D4D4D4 !default; // visible when highlighting text
 
-// header colors
-$header-link-color: #383838;
+// Tags color
+$tags-color: #b0b0b0 !default;
 
-// feature image for articles
-$feature-image-text-color: #fff;
-$feature-image-size: cover; // options include "cover", "contain", "auto"
+//Search color
+$search-color: #999 !default;
 
-// header description box
-$header-desc-background-color: #F98752; 
-$header-desc-text-color: #FFF;
+// Header colours
+$header-link-color: #383838 !default;
+
+// Feature image for articles
+$feature-image-text-color: #fff !default;
+$feature-image-size: cover !default; // options include "cover", "contain", "auto"
+
+// Header description box
+$header-desc-background-color: #1ABC9C !default;
+$header-desc-text-color: #FFF !default;
+$header-desc-link-color: #02453D !default;
