@@ -2,7 +2,7 @@
 layout: page
 title: Academic Research
 permalink: /research/
-feature-img: "img/research.jpg"
+feature-img: "assets/img/drexel-main-side.jpg"
 ---
 
 {:toc}

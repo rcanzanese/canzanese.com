@@ -47,7 +47,7 @@ header {
     color: $feature-image-text-color;
     background-size: $feature-image-size;
     margin-bottom: 0;
-    padding: 25px $padding-large;
+    padding: $padding-small $padding-large;
     text-shadow: 4px 4px 8px #000000;
 
     .meta {
@@ -57,4 +57,12 @@ header {
   .post-content {
     @extend %padding-regular;
   }
+}
+.custom-about {
+  width: auto;
+  text-align: center;
+  font-size: 125%;
+}
+.img-circle {
+    border-radius: 50%;
 }

@@ -2,7 +2,7 @@
 layout: page
 title: Teaching
 permalink: /teaching/
-feature-img: "img/bossone.jpg"
+feature-img: "assets/img/drexel-main-zoom.jpg"
 ---
 | Year | Course |
 |---|---|

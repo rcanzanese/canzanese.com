@@ -2,7 +2,7 @@
 layout: page
 title: Publications
 permalink: /publications/
-feature-img: "img/mountain.jpg"
+feature-img: "assets/img/beach.jpg"
 ---
 
 ### Thesis 
