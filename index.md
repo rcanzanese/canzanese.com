@@ -12,7 +12,7 @@ Director of Threat Research at [Netskope](https://www.netskope.com/)
 Read our latest work  our work on our [blog](https://www.netskope.com/blog/category/netskope-threat-research-labs)
 {: about}
 
-Follow me on [twitter](https://twitter.com/ray_canzanese) to get our latest updates.
+Follow me on [twitter](https://twitter.com/ray_canzanese) to get our latest updates
 {: about}
 
 {% twitter https://twitter.com/ray_canzanese maxwidth=1000 limit=1 %}
