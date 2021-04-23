@@ -6,24 +6,24 @@
 apt-get install jekyll
 ```
 
-### Install jekyll-scholar
+### Install dependencies
 ```
-apt-get install ruby-dev
-gem install jekyll-scholar
+apt-get install ruby-dev bundler
+bundle install
 ```
 
 ### Test
 ```
-jekyll serve
+bundle exec jekyll serve
 ```
 
 ### Build
 ```
-jekyll build
+bundle exec jekyll build
 ```
 
 ### Update
 
 ```
-aws s3 sync . s3://[bucketname]
+aws s3 sync _site/ s3://canzanese.com/ --delete
 ```

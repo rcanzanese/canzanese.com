@@ -1,8 +1,47 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.canzanese.com" # the base hostname & protocol for your site
+theme: type-on-strap
 
 plugins: ['jekyll-paginate', 'jekyll-twitter-plugin', 'jekyll/scholar']
+
+# THEME-SPECIFIC CONFIGURATION
+title: Ray Canzanese                                    # site's title
+description: "Cloud threat researcher"                  # used by search engines
+avatar: assets/img/headshot_circle_bw.png                         # Empty for no avatar in navbar
+favicon: assets/favicon.ico                             # Icon displayed in the tab
+
+# Header and footer text
+header_text: Change <code>header_text</code> in <code>_config.yml</code>  # Change Blog header text
+header_feature_image: assets/img/pexels/triangular.jpeg
+footer_text: " "
+
+# Blog
+excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable
+post_navigation: true
+color_image: /assets/img/lineart.png                    # A bit transparent for color posts.
+
+# Features
+# More in the _data folder for social icons, share buttons, author and language
+# For layout customization, go to the "_sass > base" folder, and check "_variables.scss"
+katex: true                                             # Enable if using math markup
+mermaid: true                                           # Enable mermaid-js for sequence and diagrams
+google_analytics: "UA-40099975-1"                       # Tracking ID, e.g. "UA-000000-01"
+cookie_consent: true                                    # To respect the usage of cookies
+# disqus_shortname:                                       # Your discus shortname for comments
+
+# PAGINATION
+paginate: 5
+paginate_path: "/blog/page:num"
+
+# PORTFOLIO
+# collections:
+#   portfolio:
+#     output: true
+#     permalink: /:collection/:name
+
+# BUILD SETTINGS
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
@@ -11,7 +50,7 @@ theme_settings:
   avatar: assets/img/avatar.png
   gravatar: # email md5 hash
   description: "Teaching, Research, Projects, and Musings of Ray Canzanese" # used by search engines
-  
+
   # Header and footer text
   header_text:
   footer_text: >
@@ -24,29 +63,29 @@ theme_settings:
   rss: false
   email_address: # Full email address, e.g. "sam@example.com"
   behance:
-  bitbucket: 
-  dribbble: 
+  bitbucket:
+  dribbble:
   facebook: "rcanzanese"
-  flickr: 
+  flickr:
   geocaching: "97be5aa9-4122-426c-aca5-11fed0a469b5"
   github: "rcanzanese"
-  google_plus: 
-  instagram: 
+  google_plus:
+  instagram:
   linkedin:  "https://www.linkedin.com/pub/raymond-canzanese-jr/6/a84/178" # full URL
-  pinterest: 
-  reddit: 
-  soundcloud: 
+  pinterest:
+  reddit:
+  soundcloud:
   stack_exchange:  # full URL
-  steam: 
-  tumblr: 
+  steam:
+  tumblr:
   twitter: "ray_canzanese"
-  wordpress: 
-  youtube: 
-  
+  wordpress:
+  youtube:
+
   # Scripts
   google_analytics: "UA-40099975-1" # tracking id, e.g. "UA-000000-01"
   disqus_shortname: "canzanese"
-  
+
   katex: true # Enable if using math markup
   search: false # Enable the search feature
 
@@ -79,7 +118,7 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
-  
+
 # BIBTEX SETTINGS
 scholar:
   style:  _bibliography/ieee_custom
@@ -96,7 +135,7 @@ scholar:
   details_link:  "[bib]"
   query: "@*"
   repository: ./publications/
-  
+
 exclude:
   - Gemfile
   - Gemfile.lock

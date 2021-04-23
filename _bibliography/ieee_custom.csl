@@ -227,7 +227,7 @@
       <!-- Citation Number -->
       <!-- <text variable="citation-number" prefix="[" suffix="]  "/> -->
       <!-- Author(s) -->
-      <text macro="author" suffix=", "/>
+      <!-- <text macro="author" suffix=", "/> -->
       <!-- Rest of Citation -->
       <choose>
         <!-- Specific Formats -->
@@ -237,6 +237,7 @@
             <text variable="container-title" font-style="italic" form="short"/>
             <text macro="locators"/>
             <text macro="page"/>
+            <text macro="author"/>
             <text macro="issued"/>
           </group>
         </if>
@@ -244,6 +245,7 @@
           <group delimiter=", ">
             <text macro="title"/>
             <text macro="event"/>
+            <text macro="author"/>
             <text macro="issued"/>
             <!--<text macro="locators"/>
             <text macro="page"/> -->
@@ -265,6 +267,7 @@
             <text macro="title"/>
             <text variable="genre"/>
             <text macro="publisher"/>
+            <text macro="author"/>
             <text macro="issued"/>
           </group>
         </else-if>
@@ -280,6 +283,7 @@
           <group delimiter=", ">
             <text macro="title"/>
             <text variable="number"/>
+            <text macro="author"/>
             <text macro="issued"/>
           </group>
         </else-if>

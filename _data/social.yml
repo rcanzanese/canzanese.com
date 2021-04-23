@@ -1,0 +1,40 @@
+# Icons on the footer
+rss: true
+email_address:    # Full email address, e.g. "sam@example.com"
+behance:
+bitbucket:
+dribbble:
+facebook: "rcanzanese"
+flickr:
+gitlab:
+github: "rcanzanese"
+instagram:
+keybase:
+linkedin: "https://www.linkedin.com/in/raymond-canzanese-jr-178a846/"
+pinterest:
+reddit:
+soundcloud:
+stack_overflow:
+stack_exchange:   # Full URL
+steam:
+tumblr:
+twitter: "ray_canzanese"         # "twitter username"
+vimeo:
+wordpress:
+youtube:          # Youtube channel token like: UCqECaJ8Gagnn7YCbPEzWH6g
+
+# rss specify feed path
+feed:
+  path: feed.xml
+
+# Share button options
+share:
+  facebook: true
+  twitter: true
+  tumblr: false
+  pinterest: false
+  pocket: false
+  reddit: true
+  linkedin: true
+  wordpress: false
+  email: true
